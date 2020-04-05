@@ -54,8 +54,19 @@ public class Usuario {
        this.saldo = saldo;
    }
    
-   
-      
+   @Override
+   public boolean equals (Object obj){
+       if(obj instanceof Usuario) {
+           Usuario u = (Usuario) obj;
+           if(this.cedula== u.cedula){
+               return true;
+           } else {
+               return false;
+           }
+       } else {
+           return false;
+       }
+   }   
 }
 
 
