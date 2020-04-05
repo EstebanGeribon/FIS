@@ -21,12 +21,15 @@ public class FuncionesUsuario {
     }
     
     public double fhijos(double imp, int hijos) {
-        double a = ((hijos * 3)/100)+1;
-        if(a>0.5){
-            imp = imp/0.5;            
-            } else {
-                    imp = imp/a;
+        if(hijos>0){
+            double a = (hijos * 0.03);
+            if(a>0.5){
+                imp = imp/2;            
+                } else {
+                        imp = imp/(a+1);
+                 }
         }
+               
         return imp;
     }
 }
